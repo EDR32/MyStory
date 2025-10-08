@@ -1,8 +1,8 @@
 //  LOAD HEADER & FOOTER
 document.addEventListener("DOMContentLoaded", function () {
     Promise.all([
-        fetch("../components/header.html").then(res => res.text()),
-        fetch("../components/footer.html").then(res => res.text())
+        fetch("components/header.html").then(res => res.text()),
+        fetch("components/footer.html").then(res => res.text())
     ])
     .then(([headerHTML, footerHTML]) => {
         document.getElementById("header").innerHTML = headerHTML;
