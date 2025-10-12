@@ -91,6 +91,7 @@ function initMainScripts() {
     // SCROLL REVEAL EFFECT
     const revealElements = document.querySelectorAll(
         ".section-title, .gallery .gallery-item, .gallery h2, " +
+        ".about-me .about-me-content," +
         ".skills .skill, .skills-quote, " +
         ".experience .timeline-item, .experience-quote, " +
         ".education .timeline-item"
