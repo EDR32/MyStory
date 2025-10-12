@@ -93,8 +93,8 @@ function initMainScripts() {
         ".section-title, .gallery .gallery-item, .gallery h2, " +
         ".about-me .about-me-content," +
         ".skills .skill, .skills-quote, " +
-        ".experience .timeline-item, .experience-quote, " +
-        ".education .timeline-item, .education-quote"
+        ".timeline, .timeline-item, .experience-quote, .education-quote"
+        
     );
 
     const revealOnScroll = () => {

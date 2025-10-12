@@ -415,14 +415,16 @@ span {
 
 /* SKILLS SECTION END */
 
-/* EXPERIENCE SECTION START */
-.experience {
+/* EXPERIENCE & EDUCATION SECTION START */
+.experience,
+.education {
     padding: 6rem 9%;
     background-color: var(--bg-color);
     color: var(--text-color);
 }
 
-.experience h2{
+.experience h2,
+.education h2 {
     text-align: center;
 }
 
@@ -431,6 +433,14 @@ span {
     margin: 4rem auto;
     max-width: 800px;
     padding-left: 2rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.timeline.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .timeline::before {
@@ -448,6 +458,14 @@ span {
     position: relative;
     margin-bottom: 3rem;
     padding-left: 3rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .timeline-dot {
@@ -472,7 +490,7 @@ span {
     background-color: var(--secondary-color);
     padding: 1.5rem 2rem;
     border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -492,112 +510,7 @@ span {
     line-height: 1.6;
 }
 
-.experience-quote {
-    margin-top: 5rem;
-    text-align: center;
-    font-size: 1.8rem;
-    font-style: italic;
-    color: var(--primary-color);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease;
-}
-
-.experience-quote.active{
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* EXPERIENCE SECTION END */
-
-/* EDUCATION SECTION START */
-.education {
-    padding: 6rem 9%;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-.timeline-item {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease;
-}
-
-.timeline-item.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.education h2 {
-    text-align: center;
-}
-
-.education .timeline {
-    position: relative;
-    margin: 4rem auto;
-    max-width: 800px;
-    padding-left: 2rem;
-}
-
-.education .timeline::before {
-    content: '';
-    position: absolute;
-    left: 10px;
-    top: 0;
-    width: 4px;
-    height: 100%;
-    background-color: var(--primary-color);
-    border-radius: 2px;
-}
-
-.education .timeline-item {
-    position: relative;
-    margin-bottom: 3rem;
-    padding-left: 3rem;
-}
-
-.education .timeline-dot {
-    position: absolute;
-    left: -1px;
-    top: 5px;
-    width: 14px;
-    height: 14px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    box-shadow: 0 0 10px var(--primary-color);
-}
-
-.education .timeline-date {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.education .timeline-content {
-    background-color: var(--secondary-color);
-    padding: 1.5rem 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.education .timeline-content:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px var(--primary-color);
-}
-
-.education .timeline-content h3 {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.education .timeline-content p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-}
-
+.experience-quote,
 .education-quote {
     margin-top: 5rem;
     text-align: center;
@@ -609,11 +522,12 @@ span {
     transition: all 0.6s ease;
 }
 
-.education-quote.active{
+.experience-quote.active,
+.education-quote.active {
     opacity: 1;
     transform: translateY(0);
 }
-/* EDUCATION SECTION END */
+/* EXPERIENCE & EDUCATION SECTION END */
 
 /*  FOOTER SECTION START  */
 .footer {
