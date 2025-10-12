@@ -46,7 +46,7 @@ function initMainScripts() {
 
     // ACTIVE NAV LINK & SMOOTH SCROLL
     const navLinks = document.querySelectorAll("nav a[href^='#'], nav a[href*='#']");
-    const sections = document.querySelectorAll("section[id]");
+    const sections = document.querySelectorAll("[id]");
 
     navLinks.forEach(link => {
         link.addEventListener("click", e => {
@@ -71,7 +71,7 @@ function initMainScripts() {
     });
 
     window.addEventListener("scroll", () => {
-        let scrollY = window.scrollY + 150;
+        let scrollY = window.scrollY + 250;
         sections.forEach(sec => {
             let top = sec.offsetTop;
             let height = sec.offsetHeight;
@@ -94,7 +94,7 @@ function initMainScripts() {
         ".about-me .about-me-content," +
         ".skills .skill, .skills-quote, " +
         ".experience .timeline-item, .experience-quote, " +
-        ".education .timeline-item"
+        ".education .timeline-item, .education-quote"
     );
 
     const revealOnScroll = () => {
