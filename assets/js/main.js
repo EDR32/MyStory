@@ -101,7 +101,7 @@ function initMainScripts() {
         const windowHeight = window.innerHeight;
         revealElements.forEach(el => {
             const elementTop = el.getBoundingClientRect().top;
-            const visible = 150;
+            const visible = 100;
             if (elementTop < windowHeight - visible) {
                 el.classList.add("active");
             } else {
